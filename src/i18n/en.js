@@ -356,7 +356,7 @@ const eng = {
             status: 'Status',
             title: 'Title',
             type: 'Type',
-            isai:'Is-AI'
+            isai:'Suggested By AI'
         },
         status: {
             notApplicable: 'N/A',

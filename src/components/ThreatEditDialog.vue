@@ -93,13 +93,14 @@
                             id="is-ai"
                             class="float-left"
                             :label="$t('threats.properties.isai')"
-                            label-for="isai">
+                            label-for="isai-checkbox">
 
                             <b-form-checkbox
                             id="isai-checkbox"
+                            class="float-left"
                             v-model="threat.isai"
                             name="isai-checkbox"
-                            >Is AI Enabled
+                            >
                             </b-form-checkbox>
                         </b-form-group>
                     </b-col>

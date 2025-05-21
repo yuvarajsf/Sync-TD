@@ -14,7 +14,7 @@
             </b-row>
             <b-row>
                 <b-col>
-                    <p v-if="isai">Is AI : {{ isai }}</p>
+                    <p v-if="isai">{{ $t('threats.properties.isai') }} : {{ isai }}</p>
                 </b-col>
             </b-row>
             <b-row>
