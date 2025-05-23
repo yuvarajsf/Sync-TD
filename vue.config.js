@@ -47,7 +47,8 @@ console.log(`Running on ${hasTlsCredentials ? `HTTPS (Port ${port})` : `HTTP (Po
 
 
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production' ? '/public' : '/',
+    publicPath: './',
+    outputDir: 'docs/',
     productionSourceMap: false,
     devServer: devServerConfig,
     lintOnSave: false,

@@ -1,0 +1,33 @@
+name: Build and Deploy Vue to GitHub Pages (docs folder)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Vue App
+        run: npm run build
+
+      - name: Commit built files to main/docs
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add docs -f
+          git commit -m 'Build: Update docs folder' || echo "No changes to commit"
+          git push
